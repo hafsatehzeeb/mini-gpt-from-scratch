@@ -101,6 +101,10 @@ async function generateText() {
 
         tokens.push(nextToken);
     }
+    document.getElementById("generate").addEventListener(
+    "click",
+    generateText
+);
 
     document.getElementById("output").value =
         tokens.map(token => itos[String(token)]).join("");
